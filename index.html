@@ -1,0 +1,401 @@
+<html>
+<head>
+
+<style>
+    .x
+    {
+        height: 100px;
+        width: 100px;
+        background-color: whitesmoke;
+        color: black;
+        font-size: xx-large;
+        font-weight: bold;
+        margin-left: 25px;
+
+    }
+    .y
+    {
+        height: 500px;
+        width: 550px;
+        background-color: pink;
+        margin-left: 350px;
+        margin-top: 100px;
+        padding-top: 70px;
+        padding-left: 70px;
+    }
+    
+    
+</style>
+
+<script>
+
+    var  c1=0,c2=0;
+function restart()
+{
+    document.getElementById("z").innerHTML=c1;
+    document.getElementById("y").innerHTML=c2;
+     
+    
+    document.getElementById("b1").value="";
+    document.getElementById("b2").value="";
+    document.getElementById("b3").value="";
+    document.getElementById("b4").value="";
+    document.getElementById("b5").value="";
+    document.getElementById("b6").value="";
+    document.getElementById("b7").value="";
+    document.getElementById("b8").value="";
+    document.getElementById("b9").value="";
+
+
+    turn=1;
+
+}
+
+function winner()
+    {
+        var a=document.getElementById("b1").value;
+        var b=document.getElementById("b2").value;
+        var c=document.getElementById("b3").value;
+        var d=document.getElementById("b4").value;
+        var e=document.getElementById("b5").value;
+        var f=document.getElementById("b6").value;
+        var g=document.getElementById("b7").value;
+        var h=document.getElementById("b8").value;
+        var i=document.getElementById("b9").value;
+
+           if(a.length!=0&&b.length!=0&&c.length!=0)
+         {
+            
+            if(a==b&&a==c)
+            {
+            if(a=="*")
+            {
+                c1++;
+                alert("pLAYER 2 IS WINNER");
+                restart();
+            }
+            else{
+                c2++;
+                alert("pLAYER 1 IS WINNER"); 
+            
+            restart();
+
+            }
+        }
+        }
+//vertical 
+
+  if(a.length!=0&&d.length!=0&&g.length!=0)
+  {
+            if(a==d&&a==g)
+            {
+            if(a=="*")
+            {
+                c1++;
+                alert("pLAYER 2 IS WINNER");
+                restart();
+            }
+            else{
+                c2++;
+                alert("pLAYER 1 IS WINNER");
+            
+            restart();
+        }
+        }
+         }
+         //diagonal
+         if(a.length!=0&&e.length!=0&&i.length!=0)
+         {
+            if(a==e&&a==i)
+            {
+            if(a=="*")
+            {
+                c1++;
+                alert("pLAYER 2 IS WINNER");
+                restart();
+            }
+            else{
+                c2++;
+                alert("pLAYER 1 IS WINNER");
+            
+            restart();
+            }
+         }
+        }
+         if(b.length!=0&&e.length!=0&&h.length!=0)
+         {
+            if(b==e&&b==h)
+            {
+            if(b=="*")
+            {
+                c1++;
+                alert("pLAYER 2 IS WINNER");
+                restart();
+            }
+            else{
+                c2++;
+                alert("pLAYER  1 IS WINNER");
+            
+            restart();
+            }
+        }
+         }
+         if(c.length!=0&&f.length!=0&&i.length!=0)
+         {
+            if(c==f&&c==i)
+            {
+            if(c=="*")
+            {
+                c1++;
+                alert("pLAYER 2 IS WINNER");
+                restart();
+            }
+            else{
+                c2++;
+                alert("pLAYER 1 IS WINNER");
+            
+            restart();
+            }
+        }
+         }
+         if(d.length!=0&&e.length!=0&&f.length!=0)
+         {
+            if(d==e&&d==f)
+            {
+            if(d=="*")
+            {
+                c1++;
+                alert("pLAYER 2 IS WINNER");
+                restart();
+            }
+            else{
+                c2++;
+                alert("pLAYER 1 IS WINNER");
+            
+            restart();
+            }
+        }
+         }
+         if(g.length!=0&&h.length!=0&&i.length!=0)
+         {
+            if(g==h&&g==i)
+            {
+            if(g=="*")
+            {
+                c1++;
+                alert("pLAYER 2 IS WINNER");
+                restart();
+            }
+            else{
+                c2++;
+                alert("pLAYER 1 IS WINNER");
+            
+            restart();
+            }
+        }
+    }
+         if(c.length!=0&&e.length!=0&&g.length!=0)
+         {
+            if(c==e&&c==g)
+            {
+            if(c=="*")
+            {
+                c1++;
+                alert("pLAYER 2 IS WINNER");
+                restart();
+            }
+            else{
+                c2++;
+                alert("pLAYER 1 IS WINNER");
+            
+            restart();
+            }
+         }
+        }
+    
+         if( turn==10)
+         {
+             alert("draws");
+            restart();
+         }
+       
+         
+         if(c2==3)
+    {
+        alert("player 1 is winner");
+        restart();
+    }
+    if(c1==3)
+    {
+        alert("player 2 is winner");
+        restart();
+    }
+         
+  
+}
+
+var turn=1;
+function show1(){
+   {
+    if(document.getElementById("b1").value.length==0)
+    {
+    if(turn%2==0){
+        document.getElementById("b1").value="*";
+    }
+    else{
+        document.getElementById("b1").value="0";
+    }
+    turn++;
+    winner();
+}
+}
+}
+
+function show2(){
+   {
+    if(document.getElementById("b2").value.length==0)
+    {
+    if(turn%2==0){
+        document.getElementById("b2").value="*";
+    }
+    else{
+        document.getElementById("b2").value="0";
+    }
+    turn++;
+    winner();
+    
+   
+}
+}
+}
+function show3(){
+   {
+    if(document.getElementById("b3").value.length==0)
+    {
+    if(turn%2==0){
+        document.getElementById("b3").value="*";
+   }
+    else{
+        document.getElementById("b3").value="0";
+    }
+    turn++;
+    winner();
+   
+}
+}
+}
+function show4(){
+    {
+        if(document.getElementById("b4").value.length==0)
+    {
+    if(turn%2==0){
+        document.getElementById("b4").value="*";
+    }
+    else{
+        document.getElementById("b4").value="0";
+    }
+    turn++;
+    winner();
+}
+}
+}
+function show5(){
+    {
+        if(document.getElementById("b5").value.length==0)
+    {
+    if(turn%2==0){
+        document.getElementById("b5").value="*";
+    }
+    else{
+        document.getElementById("b5").value="0";
+    }
+    turn++;
+    winner();
+}
+}
+}
+function show6(){
+   {
+    if(document.getElementById("b6").value.length==0)
+    {
+    if(turn%2==0){
+        document.getElementById("b6").value="*";
+    }
+    else{
+        document.getElementById("b6").value="0";
+    }
+    turn++;
+    winner();
+}
+}
+}
+function show7(){
+   {
+    if(document.getElementById("b7").value.length==0)
+    {
+    if(turn%2==0){
+        document.getElementById("b7").value="*";
+    }
+    else{
+        document.getElementById("b7").value="0";
+    }
+    turn++;
+    winner();
+}
+}
+}
+function show8(){
+    {
+        if(document.getElementById("b8").value.length==0)
+    {
+    if(turn%2==0){
+        document.getElementById("b8").value="*";
+    }
+    else{
+        document.getElementById("b8").value="0";
+    }
+    turn++;
+    winner();
+}
+}
+}
+function show9(){
+   {
+    if(document.getElementById("b9").value.length==0)
+    {
+    if(turn%2==0){
+        document.getElementById("b9").value="*";
+    }
+    else{
+        document.getElementById("b9").value="0";
+    }
+    turn++;
+    winner();
+    }
+}
+}
+
+</script>
+</head>
+<body> 
+<div class="y">
+    <p id="d1">PLAYER 2</p><span id="z">0</span>
+    <br>
+<input type="button" class="x"  id="b1" onclick="show1()">
+<input type="button"  class="x"  id="b2" onclick="show2()">
+<input type="button" class="x"  id="b3" onclick="show3()">
+<br>
+<input type="button" class="x"  id="b4" onclick="show4()">
+<input type="button"  class="x"  id="b5" onclick="show5()">
+<input type="button" class="x"  id="b6" onclick="show6()">
+<br>
+<input type="button" class="x"  id="b7" onclick="show7()">
+
+<input type="button" class="x"  id="b8" onclick="show8()">
+<input type="button" class="x"  id="b9" onclick="show9()">
+
+<P id="d2">PLAYER 1 </P><span id="y">0</span>
+
+
+</body>
+</html>
